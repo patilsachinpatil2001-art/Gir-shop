@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Success - GIR Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-header">
+            <div class="container">
+                <div>📧 support@girshop.com | 📞 1-800-GIR-SHOP</div>
+                <div>🚚 Free Shipping on orders over $50!</div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    GIR <span>Shop</span>
+                </a>
+                <div class="search-bar">
+                    <form class="search-form" onsubmit="searchProducts(event)">
+                        <input type="text" id="searchInput" placeholder="Search for products, brands and more...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="header-actions">
+                    <a href="login.html" class="header-btn" id="userBtn">
+                        <i class="fas fa-user"></i>
+                        <span id="userLabel">Login</span>
+                    </a>
+                    <a href="cart.html" class="header-btn" style="position: relative;">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html?category=Electronics">Electronics</a></li>
+                    <li><a href="categories.html?category=Clothes">Clothes</a></li>
+                    <li><a href="categories.html?category=Toys">Toys</a></li>
+                    <li><a href="categories.html?category=Gift Items">Gift Items</a></li>
+                    <li><a href="categories.html">All Products</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Success Container -->
+    <div class="cart-container">
+        <div class="container">
+            <div style="background-color: white; padding: 60px 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; max-width: 700px; margin: 0 auto;">
+                <div style="font-size: 5rem; color: #2ECC71; margin-bottom: 20px;">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h1 style="color: #2ECC71; margin-bottom: 15px;">Order Placed Successfully!</h1>
+                <p style="color: #7f8c8d; font-size: 1.1rem; margin-bottom: 30px;">Thank you for shopping with GIR Shop</p>
+                
+                <div style="background-color: #f8f9fa; padding: 30px; border-radius: 8px; margin-bottom: 30px;">
+                    <h3 style="margin-bottom: 20px; color: #2C3E50;">Order Details</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left;">
+                        <div>
+                            <strong>Order ID:</strong>
+                            <div id="orderId" style="color: #7f8c8d;"></div>
+                        </div>
+                        <div>
+                            <strong>Total Amount:</strong>
+                            <div id="orderTotal" style="color: #2ECC71; font-size: 1.5rem; font-weight: bold;"></div>
+                        </div>
+                        <div>
+                            <strong>Items:</strong>
+                            <div id="orderItems" style="color: #7f8c8d;"></div>
+                        </div>
+                        <div>
+                            <strong>Payment Method:</strong>
+                            <div id="orderPayment" style="color: #7f8c8d;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="index.html" class="btn" style="text-decoration: none; display: inline-block; padding: 12px 30px;">
+                        <i class="fas fa-home"></i> Back to Home
+                    </a>
+                    <a href="categories.html" class="btn btn-secondary" style="text-decoration: none; display: inline-block; padding: 12px 30px;">
+                        <i class="fas fa-shopping-bag"></i> Continue Shopping
+                    </a>
+                </div>
+
+                <div class="vulnerability-hint" style="margin-top: 30px; text-align: left;">
+                    <strong>🔓 Security Note:</strong> This order was placed with client-side validation only. 
+                    If you tampered with prices or parameters, the manipulated values were accepted without server-side verification!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About GIR Shop</h3>
+                    <p>Your trusted online shopping destination for electronics, fashion, toys, and gifts. Quality products at unbeatable prices!</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">All Products</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                        <li><a href="login.html">Login/Signup</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@girshop.com</li>
+                        <li><i class="fas fa-phone"></i> 1-800-GIR-SHOP</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Shopping St, Mall City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GIR Shop. All rights reserved. | <strong style="color: #E74C3C;">⚠️ Educational Purpose - Contains Intentional Vulnerabilities</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script>
+        // Load order details from URL
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const orderData = urlParams.get('order');
+            
+            if (orderData) {
+                const order = JSON.parse(decodeURIComponent(orderData));
+                document.getElementById('orderId').textContent = order.orderId.substring(0, 8) + '...';
+                document.getElementById('orderTotal').textContent = formatCurrency(order.total);
+                document.getElementById('orderItems').textContent = order.items + ' items';
+                document.getElementById('orderPayment').textContent = order.paymentMethod.toUpperCase();
+            }
+        });
+    </script>
+</body>
+</html>

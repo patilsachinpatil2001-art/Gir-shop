@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - GIR Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-header">
+            <div class="container">
+                <div>📧 support@girshop.com | 📞 1-800-GIR-SHOP</div>
+                <div>🚚 Free Shipping on orders over $50!</div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    GIR <span>Shop</span>
+                </a>
+                <div class="search-bar">
+                    <form class="search-form" onsubmit="searchProducts(event)">
+                        <input type="text" id="searchInput" placeholder="Search for products, brands and more...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="header-actions">
+                    <a href="login.html" class="header-btn" id="userBtn">
+                        <i class="fas fa-user"></i>
+                        <span id="userLabel">Login</span>
+                    </a>
+                    <a href="cart.html" class="header-btn" style="position: relative;">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html?category=Electronics">Electronics</a></li>
+                    <li><a href="categories.html?category=Clothes">Clothes</a></li>
+                    <li><a href="categories.html?category=Toys">Toys</a></li>
+                    <li><a href="categories.html?category=Gift Items">Gift Items</a></li>
+                    <li><a href="categories.html" class="active">All Products</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Products Section -->
+    <section class="products-section" style="margin-top: 40px;">
+        <div class="container">
+            <div class="products-header">
+                <h2 class="section-title" id="pageTitle">All Products</h2>
+                <div class="filter-section">
+                    <select id="categoryFilter" onchange="filterProducts()">
+                        <option value="">All Categories</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Clothes">Clothes</option>
+                        <option value="Toys">Toys</option>
+                        <option value="Gift Items">Gift Items</option>
+                    </select>
+                    <select id="sortFilter" onchange="filterProducts()">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="discount">Highest Discount</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div id="resultsInfo" style="margin-bottom: 20px; color: #7f8c8d;"></div>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About GIR Shop</h3>
+                    <p>Your trusted online shopping destination for electronics, fashion, toys, and gifts. Quality products at unbeatable prices!</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">All Products</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                        <li><a href="login.html">Login/Signup</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@girshop.com</li>
+                        <li><i class="fas fa-phone"></i> 1-800-GIR-SHOP</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Shopping St, Mall City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GIR Shop. All rights reserved. | <strong style="color: #E74C3C;">⚠️ Educational Purpose - Contains Intentional Vulnerabilities</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/categories.js"></script>
+</body>
+</html>
